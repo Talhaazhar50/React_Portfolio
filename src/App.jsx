@@ -7,7 +7,7 @@ import Cursor from "./components/cursor/Cursor";
 import Parallax from "./components/parallax/Parallax";
 import Portfolio from "./components/portfolio/Portfolio";
 import Services from "./components/services/Services";
-
+// working
 const App = () => {
   return (
     <div>
