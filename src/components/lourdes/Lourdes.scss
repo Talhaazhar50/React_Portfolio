@@ -1,19 +1,14 @@
-@import "../../app.scss";
+@import '../../app.scss';
 
 .lourdes {
-   height: calc(100vh - 100px);
-  // height: 100vh;
+  height: calc(100vh - 100px);
   overflow: hidden;
   background: linear-gradient(180deg, #0c0c1d, #111132);
-  position: relative;
-  width: 100%;
-  margin-top: 10%;
-  margin-bottom: 20%;
+
   z-index: 7;
 
-  
   .wrapper {
-   max-width: 1366px;
+    max-width: 1366px;
     height: 100%;
     margin: auto;
 
@@ -25,8 +20,6 @@
       justify-content: center;
       gap: 40px;
 
-  
-
       h2 {
         font-size: 30px;
         color: rebeccapurple;
@@ -35,10 +28,8 @@
 
       h1 {
         font-size: 88px;
-
-     
       }
-
+     
       .buttons {
         button {
           padding: 20px;
@@ -64,8 +55,7 @@
     top: 0;
     right: 0;
 
-
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -80,5 +70,35 @@
     color: #ffffff09;
     width: 50%;
     font-weight: bold;
+  }
+
+  @media (max-width: 1000px) {
+    .imageContainer {
+      width: 50%;
+      height: 50%;
+    }
+
+    .textContainer {
+      width: 100%;
+
+      h2 {
+        font-size: 16px;
+      }
+
+      h1 {
+        font-size: 48px;
+      }
+
+      .buttons {
+        button {
+          padding: 10px;
+          font-size: 14px;
+        }
+      }
+
+      img {
+        width: 30px;
+      }
+    }
   }
 }

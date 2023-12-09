@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import "./Parallax.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useMediaQuery } from "@mantine/hooks";
 
 const Parallax = ({ type }) => {
   const ref = useRef();
@@ -12,6 +13,7 @@ const Parallax = ({ type }) => {
 
   const yText = useTransform(scrollYProgress, [0, 1], ["0%", "500%"]);
   const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  const Laptop = useMediaQuery("(max-width: 1000px)");
 
   return (
     <div
@@ -24,8 +26,10 @@ const Parallax = ({ type }) => {
             : "linear-gradient(180deg, #111132, #505064)",
       }}
     >
-      <motion.h1 style={{ y: yText }}>
-        {type === "services" ? "React,MongoDB,Express.js" : "HTML, CSS, JavaScript"}
+      <motion.h1 style={{ y: yText, fontSize: Laptop ? 30 : 50 }}>
+        {type === "services"
+          ? "React,MongoDB,Express.js"
+          : "HTML, CSS, JavaScript"}
       </motion.h1>
       <motion.div className="mountains"></motion.div>
       <motion.div

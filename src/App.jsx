@@ -10,7 +10,7 @@ import Services from "./components/services/Services";
 // working
 const App = () => {
   return (
-    <div>
+    <div style={{overflow:"hidden"}}>
       <Cursor />
       <section id="Homepage">
         <Navbar />
